@@ -6,10 +6,10 @@ import Resume from './images/Resume.pdf'
 import TristenSelfie from './images/Selfie1.png'
 import ReactGa from 'react-ga'
 import { useEffect } from "react";
+import DevelopedBy from './components/DevelopedBy'
 function App() {
   
   useEffect(() => {
-    // testing
     ReactGa.initialize(process.env.REACT_APP_GA_TRACKING_ID) // GA tracking ID
     // to report page view non interaction
     ReactGa.pageview(window.location.pathname)
@@ -20,7 +20,7 @@ function App() {
       <div className="bg-white px-10 ">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl font-burtons">developed by: </h1>
+            <h1 className="text-xl">developed by: <DevelopedBy/></h1>
             <ul className="flex items-center">
               <li><BsFillMoonStarsFill className="text-2xl" /></li>
               <li className="cursor-pointer text-xl">
