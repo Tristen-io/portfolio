@@ -1,8 +1,8 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './App.css';
 import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { AiFillLinkedin, AiFillGithub, AiFillGitlab } from 'react-icons/ai'
-import TristenPic from './images/tristen-rock-header.png'
+
 import TristenSelfie from './images/Selfie1.png'
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
             <ul className="flex items-center">
               <li><BsFillMoonStarsFill className="text-2xl" /></li>
               <li className="cursor-pointer text-xl">
-                <a href="#" className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"> RESUME </a></li>
+                <button className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"> RESUME </button></li>
             </ul>
           </nav>
           <div className="text-center p-10">
