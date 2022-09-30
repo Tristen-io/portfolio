@@ -1,22 +1,63 @@
-import logo from './logo.svg';
+import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
-
+import { BsFillMoonStarsFill } from 'react-icons/bs'
+import { AiFillLinkedin, AiFillGithub, AiFillGitlab } from 'react-icons/ai'
+import TristenPic from './images/tristen-rock-header.png'
+import TristenSelfie from './images/Selfie1.png'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello this is for Amplify test</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="bg-white px-10 ">
+        <section className="min-h-screen">
+          <nav className="py-10 mb-12 flex justify-between">
+            <h1 className="text-xl font-burtons">developed by: </h1>
+            <ul className="flex items-center">
+              <li><BsFillMoonStarsFill className="text-2xl" /></li>
+              <li className="cursor-pointer text-xl">
+                <a href="#" className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"> RESUME </a></li>
+            </ul>
+          </nav>
+          <div className="text-center p-10">
+            <h2 className="text-5xl py-2 text-teal-600 font-medium">
+              Tristen Martinez
+            </h2>
+            <h3 className="text-2xl py-2">
+              Full Stack Software Engineer
+            </h3>
+            <p className="text-medium py-5 leading-8 text-gray-800">
+              Enthusiastic engineer and Avid rock climber! Looking for a full time position in full stack development. 
+            </p>
+          </div>
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+            <Link > <AiFillLinkedin  /> </Link>
+            <Link > <AiFillGithub  /> </Link>
+            <Link > <AiFillGitlab  /> </Link>
+          </div>
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden">
+            <img src={TristenSelfie} className=""></img>
+          </div>
+        </section>
+
+        <section >
+          <div>
+            <h3 className="text-3xl py-1">Services I offer</h3>
+            <p className="text-md py-2 leading-8 text-gray-800">
+              I am currently working for Galvanize as a Software Engineer Immersive Resident.
+              I help and teach students programing fundamentals. I am seeking for a full time 
+              position as this contract ends in Feb 2023. 
+            </p>
+          </div>
+          <div>
+            <div>
+              
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+
+    </>
   );
 }
 
