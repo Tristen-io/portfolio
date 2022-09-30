@@ -4,7 +4,17 @@ import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { AiFillLinkedin, AiFillGithub, AiFillGitlab } from 'react-icons/ai'
 import Resume from './images/Resume.pdf'
 import TristenSelfie from './images/Selfie1.png'
+import ReactGa from 'react-ga'
+import { useEffect } from "react";
 function App() {
+  
+  useEffect(() => {
+    
+    ReactGa.initialize(process.env.REACT_APP_GA_TRACKING_ID) // GA tracking ID
+    // to report page view non interaction
+    ReactGa.pageview(window.location.pathname)
+  }, [])
+
   return (
     <>
       <div className="bg-white px-10 ">
