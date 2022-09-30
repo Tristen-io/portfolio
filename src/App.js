@@ -45,7 +45,7 @@ function App() {
               Full Stack Software Engineer
             </h3>
             <p className="text-medium py-5 leading-8 text-gray-800 dark:text-white ">
-              Enthusiastic engineer and Avid rock climber! Looking for a full time position in full stack development.
+              Enthusiastic engineer and avid rock climber! Looking for a full time position in full stack development.
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
