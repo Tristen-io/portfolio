@@ -9,7 +9,7 @@ import { useEffect } from "react";
 function App() {
   
   useEffect(() => {
-    
+    // testing
     ReactGa.initialize(process.env.REACT_APP_GA_TRACKING_ID) // GA tracking ID
     // to report page view non interaction
     ReactGa.pageview(window.location.pathname)
