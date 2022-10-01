@@ -8,6 +8,9 @@ import ReactGa from 'react-ga'
 import { useEffect, useState } from "react";
 import DevelopedBy from './components/DevelopedBy'
 import Switcher from "./components/Switcher";
+import { renderButton, checkSignedIn } from "./utils";
+
+
 function App() {
 
   useEffect(() => {
@@ -17,21 +20,31 @@ function App() {
   }, [])
 
   const [navColor, setNavColor] = useState(false)
+  const [scrollIcons, setScrollIcons] = useState(false)
 
   const changeNavColor = () => {
     if (window.scrollY >= 90) {
       setNavColor(true)
+      setScrollIcons(true)
     } else {
       setNavColor(false)
+      setScrollIcons(false)
+    }
+  }
+  const loadScrollIcons = () => {
+    if (window.scrollY >= 180) {
+      setScrollIcons(true)
+    } else {
+      setScrollIcons(false)
     }
   }
   
-  window.addEventListener('scroll', changeNavColor)
+  window.addEventListener('scroll', changeNavColor, loadScrollIcons)
 
 
   return (
     <>
-    <nav className={`fixed shadow-md  z-50 w-full px-5 py-2 flex justify-between items-center ${navColor ? "dark:bg-black dark:bg-opacity-50 bg-gray-300 bg-opacity-50" : ""}` }>
+    <nav className={`fixed shadow-md  z-50 w-full px-5 py-2 flex justify-between items-center backdrop-filter backdrop-blur-lg`}>
             <h1 className="text-xl dark:text-white">developed by: <DevelopedBy /></h1>
             <ul className="flex items-center space-x-4">
               <li className="cursor-pointer text-xl">
@@ -62,11 +75,16 @@ function App() {
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden">
             <img src={TristenSelfie} className="" alt="Selfie"></img>
           </div>
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+          { scrollIcons ? 
+            <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
             <a href="https://www.linkedin.com/in/tristen-martinez-io/" rel="noreferrer" target="_blank" className="animate__animated animate__fadeInLeftBig hover:text-teal-500 dark:text-white dark:hover:text-teal-500"> <AiFillLinkedin /> </a>
             <a href="https://github.com/Tristen-io" rel="noreferrer" target="_blank" className="animate__animated animate__fadeIn animate__delay-1s hover:text-teal-500  dark:text-white dark:hover:text-teal-500"> <AiFillGithub /> </a>
             <a href="https://gitlab.com/tristen.martinez" rel="noreferrer" target="_blank" className="animate__animated animate__fadeInRightBig hover:text-teal-500  dark:text-white dark:hover:text-teal-500"> <AiFillGitlab /> </a>
           </div>
+          :
+          <div></div>
+        }
+          
         </section>
 
         <section >
