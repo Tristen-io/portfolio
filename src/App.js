@@ -32,7 +32,7 @@ function App() {
     }
   }
   const loadScrollIcons = () => {
-    if (window.scrollY >= 180) {
+    if (window.scrollY >= 130) {
       setScrollIcons(true)
     } else {
       setScrollIcons(false)
