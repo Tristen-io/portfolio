@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+
 import './App.css';
-import { BsFillMoonStarsFill } from 'react-icons/bs'
+import 'animate.css';
 import { AiFillLinkedin, AiFillGithub, AiFillGitlab } from 'react-icons/ai'
 import Resume from './images/Resume.pdf'
 import TristenSelfie from './images/Selfie1.png'
 import ReactGa from 'react-ga'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import DevelopedBy from './components/DevelopedBy'
 import Switcher from "./components/Switcher";
 function App() {
@@ -16,17 +16,26 @@ function App() {
     ReactGa.pageview(window.location.pathname)
   }, [])
 
+  const [navColor, setNavColor] = useState(false)
+
+  const changeNavColor = () => {
+    if (window.scrollY >= 90) {
+      setNavColor(true)
+    } else {
+      setNavColor(false)
+    }
+  }
   
+  window.addEventListener('scroll', changeNavColor)
+
 
   return (
     <>
-      <div className="bg-white dark:bg-gray-800 px-10 ">
-        <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
+    <nav className={`fixed shadow-md  z-50 w-full px-5 py-2 flex justify-between items-center ${navColor ? "dark:bg-black dark:bg-opacity-50 bg-gray-300 bg-opacity-50" : ""}` }>
             <h1 className="text-xl dark:text-white">developed by: <DevelopedBy /></h1>
             <ul className="flex items-center space-x-4">
               <li className="cursor-pointer text-xl">
-                <a href={Resume} target="_blank" className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">
+                <a href={Resume} target="_blank" rel="noreferrer" className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">
                   RESUME
                 </a>
               </li>
@@ -37,7 +46,9 @@ function App() {
               </li>
             </ul>
           </nav>
-          <div className="text-center p-10">
+      <div className="bg-white dark:bg-gray-800 pt-20">
+        <section className="min-h-screen">
+          <div className="text-center">
             <h2 className="text-5xl py-2 text-teal-600  dark:text-teal-600 font-medium">
               Tristen Martinez
             </h2>
@@ -48,13 +59,13 @@ function App() {
               Enthusiastic engineer and avid rock climber! Looking for a full time position in full stack development.
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <Link > <AiFillLinkedin /> </Link>
-            <Link > <AiFillGithub /> </Link>
-            <Link > <AiFillGitlab /> </Link>
-          </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden">
-            <img src={TristenSelfie} className=""></img>
+            <img src={TristenSelfie} className="" alt="Selfie"></img>
+          </div>
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+            <a href="https://www.linkedin.com/in/tristen-martinez-io/" rel="noreferrer" target="_blank" className="animate__animated animate__fadeInLeftBig hover:text-teal-500 dark:text-white dark:hover:text-teal-500"> <AiFillLinkedin /> </a>
+            <a href="https://github.com/Tristen-io" rel="noreferrer" target="_blank" className="animate__animated animate__fadeIn animate__delay-1s hover:text-teal-500  dark:text-white dark:hover:text-teal-500"> <AiFillGithub /> </a>
+            <a href="https://gitlab.com/tristen.martinez" rel="noreferrer" target="_blank" className="animate__animated animate__fadeInRightBig hover:text-teal-500  dark:text-white dark:hover:text-teal-500"> <AiFillGitlab /> </a>
           </div>
         </section>
 
@@ -69,7 +80,7 @@ function App() {
           </div>
         </section>
 
-        <div className="w-full md:w-1/2 lg:w-2/6">
+        {/* <div className="w-full md:w-1/2 lg:w-2/6">
           <div className="bg-red-400 dark:bg-black m-4 rounded-lg shadow-2xl">
             <img src={"https://picsum.photos/seed/picsum/800/260"} alt="Post" className="rounded-t-lg"></img>
             <div className="px-4 pt-2">
@@ -95,7 +106,7 @@ function App() {
 
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
 
