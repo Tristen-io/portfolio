@@ -8,7 +8,7 @@ import ReactGa from 'react-ga'
 import { useEffect, useState } from "react";
 import DevelopedBy from './components/DevelopedBy'
 import Switcher from "./components/Switcher";
-import { renderButton, checkSignedIn } from "./utils";
+// import { renderButton, checkSignedIn } from "./utils";
 
 
 function App() {
