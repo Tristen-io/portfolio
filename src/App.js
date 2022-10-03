@@ -11,6 +11,7 @@ import Switcher from "./components/Switcher";
 import Skills from './components/Skills';
 import NavBar from './components/NavBar';
 import TristenHero from './components/TristenHero';
+import Card from './components/Card'
 // import { renderButton, checkSignedIn } from "./utils";
 
 
@@ -49,7 +50,8 @@ function App() {
     <>
       <NavBar/>
       <TristenHero scrollIcons={scrollIcons}/>
-
+      <Skills />
+      <Card/>
         <section >
           {/* <div>
             <h3 className="text-3xl py-1">Services I offer</h3>
@@ -59,7 +61,7 @@ function App() {
               position as this contract ends in Feb 2023.
             </p>
           </div> */}
-          <Skills />
+          
 
         </section>
 
