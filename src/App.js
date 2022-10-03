@@ -11,7 +11,7 @@ import Switcher from "./components/Switcher";
 import Skills from './components/Skills';
 import NavBar from './components/NavBar';
 import TristenHero from './components/TristenHero';
-import Card from './components/Card'
+import Projects from './components/Projects'
 // import { renderButton, checkSignedIn } from "./utils";
 
 
@@ -51,7 +51,7 @@ function App() {
       <NavBar/>
       <TristenHero scrollIcons={scrollIcons}/>
       <Skills />
-      <Card/>
+      <Projects/>
         <section >
           {/* <div>
             <h3 className="text-3xl py-1">Services I offer</h3>
