@@ -7,7 +7,7 @@ const TristenHero = ({scrollIcons}) => {
         <div id="home" className="bg-white dark:bg-gray-800 pt-20">
             <section className="min-h-auto">
                 <div className="text-center">
-                    <h2 className="text-5xl py-2 dark:text-white font-medium">
+                    <h2 className="text-5xl sm:text-3xl py-2 dark:text-white font-medium">
                         Developed By: <span className="text-teal-600  dark:text-teal-600"><DevelopedBy/></span>
                     </h2>
                     <h3 className="text-2xl py-2 dark:text-white ">
