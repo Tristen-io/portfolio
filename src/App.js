@@ -8,6 +8,7 @@ import ReactGa from 'react-ga'
 import { useEffect, useState } from "react";
 import DevelopedBy from './components/DevelopedBy'
 import Switcher from "./components/Switcher";
+import Skills from './components/Skills';
 // import { renderButton, checkSignedIn } from "./utils";
 
 
@@ -61,6 +62,8 @@ function App() {
           </nav>
       <div className="bg-white dark:bg-gray-800 pt-20">
         <section className="min-h-screen">
+          
+
           <div className="text-center">
             <h2 className="text-5xl py-2 text-teal-600  dark:text-teal-600 font-medium">
               Tristen Martinez
@@ -84,18 +87,21 @@ function App() {
           :
           <div></div>
         }
+         
           
         </section>
 
         <section >
-          <div>
+          {/* <div>
             <h3 className="text-3xl py-1">Services I offer</h3>
             <p className="text-md py-2 leading-8 text-gray-800">
               I am currently working for Galvanize as a Software Engineer Immersive Resident.
               I help and teach students programing fundamentals. I am seeking for a full time
               position as this contract ends in Feb 2023.
             </p>
-          </div>
+          </div> */}
+          <Skills />
+
         </section>
 
         {/* <div className="w-full md:w-1/2 lg:w-2/6">
