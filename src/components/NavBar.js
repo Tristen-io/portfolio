@@ -18,7 +18,7 @@ const NavBar = () => {
     const startNightVisionSound = () => {
         audio.play()
     }
-
+    // play sound on click for night mode
     return (
         // <nav className={`fixed shadow-md  z-50 w-full px-5 py-2 flex justify-between items-center backdrop-filter backdrop-blur-lg`}>
         //     <ul>
