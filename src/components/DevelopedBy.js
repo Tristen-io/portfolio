@@ -46,7 +46,7 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="text-medium text-teal-500 font-extrabold">
+      <h1 className="xs:text-sm sm:text-xl md:text-3xl lg:text-5xl text-teal-500 font-extrabold py-5">
         {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
       </h1>
     </>

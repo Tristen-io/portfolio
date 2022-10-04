@@ -14,10 +14,12 @@ export default function Switcher() {
     return (
         <>
             <div className="">
-                <DarkModeSwitch 
+                <DarkModeSwitch id="darkMode"
                     checked={darkSide}
                     onChange={toggleDarkMode}
-                    size={56}
+                    moonColor='white'
+                    sunColor='black'
+                    
                 />
                 {/* <h3 className="text-gray-800 dark:text-gray-300 pt-4">{ colorTheme === 'light' ? "Dark mode" : "Light mode" }</h3> */}
             </div>

@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    background: linear-gradient(0deg, rgba(1,26,34,0.89), rgba(1,26,34,0.89)), url("");
+    background: -webkit-linear-gradient(0deg, rgba(1,26,34,0.89), rgba(1,26,34,0.89)), url("");
     background-size: cover;
     background-position: center;
     transition: all 1s ease-in-out;
@@ -93,6 +93,7 @@
     box-shadow: 0 0 10px 1px #5ad0e8;
     height: 380px;
     width: 440px;
+    padding: 200px;
 }
 
 .card:hover .title, .card:hover 

@@ -1,43 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 // import DevelopedBy from '../components/DevelopedBy'
 import Switcher from "../components/Switcher";
 import Resume from '../images/Resume.pdf'
 // import CompIcon from '../images/homeicon.png'
-import {FaLaptopCode} from 'react-icons/fa'
+import { FaLaptopCode } from 'react-icons/fa'
 const NavBar = () => {
+    const [btn, setBtn] = useState(undefined)
+    const [menu, setMenu] = useState(undefined)
+    // const btn = document.querySelector("button.mobile-menu-button");
+    console.log("THIS IS THE BTN", btn)
+    // const menu = document.querySelector(".mobile-menu");
+    useEffect(() => {
+        if (btn && menu) {
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden")
+            });
+        } else {
+            return (
+                setBtn(document.querySelector("button.mobile-menu-button")),
+                setMenu(document.querySelector(".mobile-menu"))
+
+            )
+
+        }
+    }, [btn, menu])
     // const btn = document.querySelector("button.mobile-menu-button");
     // 			const menu = document.querySelector(".mobile-menu");
+    // if(btn) {
 
-    // btn.addEventListener("click", () => {
-    // 	menu.classList.toggle("hidden")
-    // });
+    //     btn.addEventListener("click", () => {
+    //         menu.classList.toggle("hidden")
+    //     });
+    // }
     let audio = new Audio("/NightVision.mp3")
-    
-    
+
+
 
     const startNightVisionSound = () => {
         audio.play()
     }
     // play sound on click for night mode
     return (
-        // <nav className={`fixed shadow-md  z-50 w-full px-5 py-2 flex justify-between items-center backdrop-filter backdrop-blur-lg`}>
-        //     <ul>
-        //         <li>Technologies</li>
-        //         <li>Projects</li>
-        //     </ul>
-        //     <ul className="flex items-center space-x-4">
-        //         <li className="cursor-pointer text-xl">
-        //             <a href={Resume} target="_blank" rel="noreferrer" className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8">
-        //                 RESUME
-        //             </a>
-        //         </li>
-        //         <li>
-        //             <div className="">
-        //                 <Switcher />
-        //             </div>
-        //         </li>
-        //     </ul>
-        // </nav>
         <div className="fixed w-full z-40 backdrop-filter backdrop-blur-lg">
 
             <nav className="shadow-lg">
@@ -74,7 +77,10 @@ const NavBar = () => {
                             </ul>
                         </div>
                         {/* mobile menu button */}
-                        <div className="md:hidden flex items-center">
+                        <div className="md:hidden flex space-x-3 items-center">
+                            <div className="" onClick={startNightVisionSound}>
+                                <Switcher />
+                            </div>
                             <button className="outline-none mobile-menu-button">
                                 <svg className=" w-6 h-6 text-gray-500 hover:text-green-500 "
                                     x-show="!showMenu"
@@ -96,6 +102,7 @@ const NavBar = () => {
                     <ul className="">
                         <li className="active"><a href="#home" className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
                         <li><a href="#projects" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Projects</a></li>
+                        <li><a href="#technologies" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Technologies</a></li>
                     </ul>
                 </div>
             </nav>
