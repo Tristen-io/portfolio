@@ -33,10 +33,10 @@ const Projects = () => {
                 </div>
                 <div className="card">
                     <div className="title">
-                        <h4>hi</h4>
+                        <h4 className="font-extrabold text-white">I love you Dana :)</h4>
                     </div>
                     <div className="description">
-                        <h5>hi</h5>
+                        <h5>Hi</h5>
                         <p>hi</p>
                         <div class="tech-stack">
                             <div>HI</div>
