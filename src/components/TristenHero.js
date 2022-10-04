@@ -2,7 +2,7 @@ import React from 'react'
 import { AiFillLinkedin, AiFillGithub, AiFillGitlab } from 'react-icons/ai'
 import TristenSelfie from '../images/Selfie1.png'
 import DevelopedBy from '../components/DevelopedBy'
-const TristenHero = ({scrollIcons}) => {
+const TristenHero = ({ scrollIcons }) => {
     return (
         <div id="home" className="bg-white dark:bg-gray-800 pt-20">
             <section className="min-h-auto">
@@ -10,7 +10,7 @@ const TristenHero = ({scrollIcons}) => {
                     <h2 id="DevelopedBy" className="xs:text-sm sm:text-sm md:text-xl lg:text-5xl py-2 dark:text-white font-medium">
                         Developed By:
                     </h2>
-                    <DevelopedBy className="text-teal-600  dark:text-teal-600"/>
+                    <DevelopedBy className="text-teal-600  dark:text-teal-600" />
                     <h3 className="text-2xl py-2 dark:text-white ">
                         Full Stack Software Engineer
                     </h3>

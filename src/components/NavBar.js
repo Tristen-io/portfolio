@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react'
-// import DevelopedBy from '../components/DevelopedBy'
 import Switcher from "../components/Switcher";
 import Resume from '../images/Resume.pdf'
-// import CompIcon from '../images/homeicon.png'
 import { FaLaptopCode } from 'react-icons/fa'
 const NavBar = () => {
+
     const [btn, setBtn] = useState(undefined)
     const [menu, setMenu] = useState(undefined)
-    // const btn = document.querySelector("button.mobile-menu-button");
-    console.log("THIS IS THE BTN", btn)
-    // const menu = document.querySelector(".mobile-menu");
+    
     useEffect(() => {
         if (btn && menu) {
             btn.addEventListener("click", () => {
@@ -24,14 +21,6 @@ const NavBar = () => {
 
         }
     }, [btn, menu])
-    // const btn = document.querySelector("button.mobile-menu-button");
-    // 			const menu = document.querySelector(".mobile-menu");
-    // if(btn) {
-
-    //     btn.addEventListener("click", () => {
-    //         menu.classList.toggle("hidden")
-    //     });
-    // }
     let audio = new Audio("/NightVision.mp3")
 
 
